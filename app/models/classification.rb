@@ -7,6 +7,6 @@ class Classification < ActiveRecord::Base
   end
 
   def self.longest
-    where("id IN (?)", Boat.longest.pluck(:id))
+    where("id IN (?)", Boat.longest.pluck(:name))
   end
 end
