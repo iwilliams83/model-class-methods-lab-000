@@ -5,4 +5,8 @@ class Classification < ActiveRecord::Base
   def self.my_all
     all
   end
+
+  def self.longest
+    where("id IN (?)", Boat.longest.pluck(:id))
+  end
 end
