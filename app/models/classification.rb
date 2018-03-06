@@ -7,6 +7,7 @@ class Classification < ActiveRecord::Base
   end
 
   def self.longest
-    self.Boat.longest
+    boat = Boat.longest
+    boat.classification 
   end
 end
